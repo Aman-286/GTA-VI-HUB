@@ -1,0 +1,48 @@
+{
+  "name": "gta-vi-hub",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:runtime": "node scripts/test-runtime.mjs",
+    "test:accounts": "node scripts/test-accounts.mjs",
+    "test:audit": "node scripts/test-audit.mjs",
+    "db:validate": "node scripts/validate-local-db.mjs",
+    "format:check": "prettier --check src tests scripts *.ts *.mjs *.json *.jsonc",
+    "format": "prettier --write src tests scripts *.ts *.mjs *.json *.jsonc",
+    "db:migrate": "wrangler d1 migrations apply DB --local",
+    "db:seed": "wrangler d1 execute DB --local --file=db/seed.sql",
+    "build:worker": "opennextjs-cloudflare build",
+    "preview": "opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare deploy"
+  },
+  "dependencies": {
+    "@opennextjs/cloudflare": "1.20.6",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.577.0",
+    "next": "16.3.3",
+    "papaparse": "^5.5.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.21",
+    "@types/node": "^24.0.0",
+    "@types/papaparse": "^5.5.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "16.3.3",
+    "prettier": "^3.9.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.11",
+    "wrangler": "^4.132.0"
+  }
+}

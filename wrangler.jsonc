@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "gta-vi-hub",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-03-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "gta-vi-hub",
+      "database_id": "00000000-0000-0000-0000-000000000001",
+      "migrations_dir": "db/migrations",
+    },
+  ],
+  "vars": { "SITE_URL": "http://localhost:3000", "DEMO_MODE": "true" },
+  "observability": { "enabled": false },
+}

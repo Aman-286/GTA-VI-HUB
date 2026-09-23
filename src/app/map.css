@@ -1,0 +1,885 @@
+.map-page {
+  /* vh first: a browser that does not understand dvh discards the whole
+     declaration, and .map-page would collapse to nothing. */
+  height: calc(
+    100vh - var(--header-h) - var(--mobile-nav-h) -
+      env(safe-area-inset-bottom, 0px)
+  );
+  height: calc(
+    100dvh - var(--header-h) - var(--mobile-nav-h) -
+      env(safe-area-inset-bottom, 0px)
+  );
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.map-titlebar {
+  height: 64px;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  gap: 12px;
+  background: var(--surface);
+}
+.map-titlebar > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: auto;
+}
+.map-titlebar h1 {
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+.map-titlebar > div > svg {
+  color: var(--accent);
+}
+.map-titlebar > .button {
+  display: none;
+}
+.map-workspace {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+.map-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  border-right: 1px solid var(--border);
+  padding: 20px;
+  background: var(--surface);
+  z-index: 410;
+}
+.map-sidebar-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.map-sidebar-heading > .eyebrow {
+  font-size: 0.65rem;
+}
+.map-sidebar-heading > button {
+  display: none;
+}
+.map-sidebar > input {
+  width: 100%;
+  font-size: 0.75rem;
+  margin-bottom: 16px;
+}
+.map-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.8rem;
+  width: 100%;
+  text-align: left;
+  min-height: 44px;
+  border-radius: 5px;
+  padding: 11px 10px;
+  margin-bottom: 2px;
+  color: var(--secondary);
+}
+.map-filter > svg:last-child {
+  margin-left: auto;
+}
+.map-filter:hover {
+  background: var(--elevated);
+}
+.map-filter.active {
+  background: #332044;
+  color: var(--accent);
+}
+.map-sidebar .checkbox-label {
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+.map-legend {
+  font-size: 0.7rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-top: 20px;
+}
+/* The area around the schematic was a flat fill, so the letterboxing on tall
+   viewports read as an unfinished page rather than as water around a landmass.
+   The stage carries a soft horizon glow; the Leaflet canvas above it is
+   transparent so that glow is what shows through around the image. */
+.map-page {
+  /* How much of the canvas the marker sheet takes on a phone. Declared once so
+     the sheet's CSS height and the space the stage gives up cannot drift
+     apart -- the bug that left the visible strip of map empty. */
+  --map-sheet-h: 50vh;
+  --map-sheet-h: 50dvh;
+}
+.map-stage {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  background:
+    radial-gradient(115% 75% at 50% -8%, #51258c3d, transparent 62%),
+    radial-gradient(90% 65% at 50% 112%, #ff3d9a14, transparent 60%), #151d34;
+}
+.leaflet-host {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  font-family: inherit;
+}
+.leaflet-container {
+  font-family: inherit !important;
+  background: transparent !important;
+}
+/* The zoom control kept Leaflet's default chrome -- square corners, a hard
+   1px seam, no hover easing -- next to a UI where every other control is
+   rounded and eased. It is now the same object as the site's icon buttons,
+   with a translucent panel so the map reads through it. */
+.leaflet-bar {
+  border: 1px solid #4b3a68 !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+  background: #1c1935cc;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 8px 28px #0000004d,
+    inset 0 1px 0 #ffffff14 !important;
+}
+.leaflet-bar a {
+  background: transparent !important;
+  color: var(--secondary) !important;
+  border-color: #4b3a68 !important;
+  min-width: 42px;
+  min-height: 42px;
+  line-height: 42px !important;
+  font-size: 17px;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+.leaflet-bar a:first-child {
+  border-radius: 9px 9px 0 0 !important;
+}
+.leaflet-bar a:last-child {
+  border-radius: 0 0 9px 9px !important;
+}
+.leaflet-control-zoom {
+  margin: 0 20px 55px 0 !important;
+}
+.leaflet-marker-icon.hub-map-pin {
+  background: transparent;
+  border: 0;
+  display: grid;
+  place-items: center;
+}
+.map-pin-glyph {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--violet);
+  border: 1px solid var(--pink);
+  color: #fff;
+  box-shadow: 0 3px 12px #0008;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+.hub-map-pin:hover .map-pin-glyph,
+.hub-map-pin:focus-visible .map-pin-glyph {
+  box-shadow:
+    0 0 0 4px #ff3d9a44,
+    0 3px 12px #0008;
+}
+.hub-map-pin.done .map-pin-glyph {
+  background: #193f4a;
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+.hub-map-pin.selected .map-pin-glyph {
+  background: var(--gradient-sunset);
+  color: var(--navy);
+  border-color: var(--peach);
+  box-shadow:
+    0 0 0 5px #ff3d9a44,
+    0 3px 12px #0008;
+}
+/* The icon root stays the full 40px box Leaflet anchors against; the visible
+   badge is the inner span. That separation lets the badge shrink on small
+   canvases -- where 40px circles swallowed a map only ~330px wide -- without
+   touching the marker transform, which Leaflet owns. */
+.leaflet-marker-icon.hub-map-cluster {
+  display: grid;
+  place-items: center;
+  background: none;
+  border: 0;
+}
+.hub-map-cluster > span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  line-height: 1;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--gradient-neon);
+  border: 2px solid var(--peach);
+  color: #fff;
+  box-shadow:
+    0 4px 16px #0008,
+    inset 0 1px 0 #ffffff2e;
+  font:
+    700 13px var(--font-body),
+    sans-serif;
+  transition:
+    box-shadow var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+.hub-map-cluster:hover > span,
+.hub-map-cluster:focus-visible > span {
+  border-color: #fff;
+  box-shadow:
+    0 0 0 4px #8a3ffc45,
+    0 4px 16px #0008,
+    inset 0 1px 0 #ffffff2e;
+}
+.hub-map-pin:focus-visible,
+.hub-map-cluster:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+/* Previously two bare glyphs floating on the canvas. Framed like the other
+   map overlays so it reads as an instrument rather than stray text. */
+.map-compass {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  z-index: 401;
+  display: grid;
+  place-items: center;
+  gap: 1px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ffffff1a;
+  border-radius: 50%;
+  background: #15152dad;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--peach);
+  text-align: center;
+  pointer-events: none;
+}
+.map-compass span {
+  display: block;
+  font-size: 1.05rem;
+  line-height: 0.8;
+  color: var(--secondary);
+}
+.map-disclaimer {
+  position: absolute;
+  z-index: 401;
+  bottom: 16px;
+  left: 20px;
+  font-size: 0.6875rem;
+  background: #15152dc7;
+  border: 1px solid #ffffff12;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: #d4bdde;
+  padding: 8px 12px;
+  border-radius: 7px;
+  pointer-events: none;
+}
+.map-loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: #15152d;
+  z-index: 402;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  gap: 24px;
+}
+.map-loading > .skeleton {
+  width: 200px;
+  height: 140px;
+  background: #332044;
+}
+.map-error {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 410;
+  background: var(--surface);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100% - 40px);
+  font-size: 0.8rem;
+}
+.map-detail {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 12px 48px #0006;
+  animation: map-detail-in 180ms ease-out;
+  width: 310px;
+  flex-shrink: 0;
+  border-left: 1px solid var(--border);
+  padding: 32px 24px;
+  background: var(--surface);
+  overflow-y: auto;
+  z-index: 410;
+}
+.map-detail .close-detail {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+.map-detail > .eyebrow {
+  margin-bottom: 12px;
+}
+.map-detail h2 {
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+}
+.map-detail > p:not(.eyebrow) {
+  font-size: 0.875rem;
+  color: var(--secondary);
+  margin-top: 24px;
+}
+.map-detail dl {
+  margin-block: 24px;
+}
+.map-detail dt {
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-top: 18px;
+}
+.map-detail dd {
+  margin: 6px 0 0;
+  font-size: 0.85rem;
+}
+.map-detail > .button {
+  width: 100%;
+  margin-top: 8px;
+}
+.marker-directory {
+  margin-top: 24px;
+  font-size: 0.75rem;
+  line-height: 1.7;
+  color: var(--secondary);
+}
+.marker-directory summary {
+  cursor: pointer;
+}
+.marker-directory button {
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.75rem;
+}
+body:has(.map-page) .site-footer {
+  display: none;
+}
+.account-settings {
+  margin-top: 32px;
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+}
+.account-settings summary {
+  cursor: pointer;
+}
+.account-settings form {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+  margin: 24px 0;
+}
+.account-settings form label {
+  flex: 1;
+}
+@media (max-width: 1024px) {
+  .map-sidebar {
+    width: 225px;
+    padding: 16px;
+  }
+  .map-detail {
+    width: 270px;
+    padding: 28px 20px;
+  }
+}
+@media (max-width: 768px) {
+  .map-titlebar > .button {
+    display: flex;
+  }
+  .map-sidebar {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 270px;
+    box-shadow: 20px 0 80px #0007;
+  }
+  .map-sidebar.open {
+    display: block;
+  }
+  .map-sidebar-heading > button {
+    display: flex;
+  }
+  .map-detail {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    bottom: 12px;
+    width: 280px;
+    box-shadow: -20px 0 80px #0007;
+  }
+}
+@media (max-width: 600px) {
+  .map-titlebar {
+    height: 58px;
+    padding: 0 12px;
+    gap: 4px;
+  }
+  .map-titlebar h1 {
+    font-size: 0.9rem;
+  }
+  .map-titlebar > div {
+    gap: 8px;
+  }
+  .map-titlebar .badge {
+    font-size: 0.625rem;
+  }
+  .map-titlebar > .button {
+    font-size: 0.7rem;
+    padding: 8px;
+  }
+  .map-titlebar > .icon-button {
+    min-width: 36px;
+  }
+  .map-detail {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 54%;
+    border-radius: 14px 14px 0 0;
+    border-top: 1px solid var(--border);
+    padding: 24px;
+  }
+  .map-detail > p:not(.eyebrow) {
+    margin-top: 14px;
+  }
+  .map-detail dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 16px;
+    margin: 16px 0;
+  }
+  .map-detail dt {
+    margin: 6px 0;
+    font-size: 0.625rem;
+  }
+  .map-detail dd {
+    margin: 6px 0;
+    font-size: 0.75rem;
+  }
+  .map-disclaimer {
+    left: 10px;
+    right: 65px;
+    font-size: 0.625rem;
+  }
+  .map-compass {
+    right: 16px;
+  }
+  .map-sidebar {
+    width: min(280px, 90%);
+  }
+  .account-settings form {
+    display: grid;
+  }
+}
+
+.map-sidebar,
+.map-detail {
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--violet) transparent;
+}
+.map-hint {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 401;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ffffff12;
+  background: #1c1935e0;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 28px #0000004d;
+  color: var(--peach);
+  font-size: 0.75rem;
+  pointer-events: none;
+  animation: map-overlay-in var(--dur-base) var(--ease-out) both;
+}
+@keyframes map-overlay-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+.has-selection .leaflet-control-zoom {
+  margin-right: 342px !important;
+}
+.has-selection .map-compass {
+  display: none;
+}
+.leaflet-bar a:hover {
+  background: #ffffff14 !important;
+  color: var(--text) !important;
+}
+.leaflet-bar a:active {
+  background: #ffffff1f !important;
+}
+.leaflet-bar a.leaflet-disabled {
+  opacity: 0.45;
+}
+.map-loading {
+  pointer-events: none;
+}
+.map-error {
+  border: 1px solid var(--pink);
+  border-radius: 8px;
+}
+@keyframes map-detail-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1024px) and (min-width: 601px) {
+  .has-selection .leaflet-control-zoom {
+    margin-right: 302px !important;
+  }
+}
+@media (max-width: 600px) {
+  .has-selection .leaflet-control-zoom {
+    margin-right: 16px !important;
+    margin-bottom: 0 !important;
+  }
+  .has-selection .leaflet-bottom.leaflet-right {
+    top: 12px;
+    bottom: auto;
+  }
+  .has-selection .map-disclaimer {
+    bottom: 56%;
+  }
+}
+@media (max-height: 500px) and (min-width: 601px) {
+  .map-titlebar {
+    height: 48px;
+  }
+  .map-detail {
+    padding: 24px 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .map-detail {
+    animation: none;
+  }
+  .map-pin-glyph {
+    transition: none;
+  }
+}
+
+/* On phones the canvas is far taller than the 1.6:1 schematic, so the fitted
+   image occupies a band across the middle. Markers scale down with it so the
+   pins stay in proportion to the map rather than covering districts. */
+@media (max-width: 600px) {
+  .map-pin-glyph {
+    width: 28px;
+    height: 28px;
+    border-radius: 9px;
+  }
+  .map-pin-glyph svg {
+    width: 15px;
+    height: 15px;
+  }
+  .hub-map-cluster > span {
+    width: 29px;
+    height: 29px;
+    font-size: 12px;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Phase 2: subcategories, region, progress summary and the marker sheet.
+   --------------------------------------------------------------------------- */
+.map-subfilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 14px 0 4px 10px;
+  border-left: 1px solid var(--border);
+  margin: 6px 0 12px 16px;
+}
+.map-subfilters > .eyebrow {
+  flex-basis: 100%;
+  font-size: 0.6rem;
+  margin: 0 0 2px;
+}
+.map-subfilter {
+  font-size: 0.72rem;
+  padding: 7px 11px;
+  min-height: 32px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--secondary);
+}
+.map-subfilter:hover {
+  background: var(--elevated);
+}
+.map-subfilter.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: #2a1c3d;
+}
+
+.map-select {
+  display: grid;
+  gap: 6px;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+.map-select select {
+  width: 100%;
+  font-size: 0.78rem;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--text);
+}
+
+.map-filter-count {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-left: auto;
+  white-space: nowrap;
+}
+.map-titlebar .map-filters-toggle {
+  margin-left: 0;
+}
+
+.map-hidden-notice {
+  margin: 16px 0;
+  padding: 12px 14px;
+  font-size: 0.75rem;
+  align-items: flex-start;
+}
+.map-hidden-notice > span {
+  min-width: 0;
+}
+
+/* Completion by category. Only categories that actually have markers are
+   listed; the rest are summarised in one honest line underneath rather than
+   padded out with 0 / 0 rows. */
+.map-summary {
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+.map-summary > .skeleton {
+  height: 14px;
+  border-radius: 4px;
+}
+.map-summary-total .eyebrow {
+  font-size: 0.6rem;
+}
+.map-summary-total p {
+  margin: 4px 0 8px;
+  font-size: 0.8rem;
+}
+.map-summary-total strong {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.map-summary-saved {
+  font-size: 0.72rem;
+  margin: 8px 0 0;
+}
+.map-summary-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+.map-summary-list button {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 10px;
+  width: 100%;
+  text-align: left;
+  font-size: 0.75rem;
+  padding: 8px 10px;
+  min-height: 44px;
+  border-radius: 5px;
+  color: var(--secondary);
+}
+.map-summary-list button:hover {
+  background: var(--elevated);
+}
+.map-summary-list button.active {
+  background: #332044;
+  color: var(--accent);
+}
+.map-summary-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.map-summary-count {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.72rem;
+}
+.progress-track.small {
+  grid-column: 1 / -1;
+  height: 3px;
+  display: block;
+}
+.map-summary-empty {
+  font-size: 0.72rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.map-directory-hint {
+  font-size: 0.7rem;
+  margin: 6px 0 10px;
+}
+
+/* Marker sheet. The grip is a visual affordance on the phone bottom sheet
+   only; it is decorative, so it is hidden from assistive technology and the
+   close button remains the real control. */
+.map-sheet-grip {
+  display: none;
+}
+.map-detail h2:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+.map-detail dl > div {
+  display: contents;
+}
+.map-detail-note {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  margin: 10px 0 0;
+}
+.map-detail-actions {
+  display: grid;
+  gap: 8px;
+  margin-top: 20px;
+}
+.map-detail-actions .button {
+  justify-content: flex-start;
+  gap: 10px;
+  font-size: 0.8rem;
+  padding: 10px 14px;
+  min-height: 44px;
+}
+.map-detail-actions .button.on {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: #2a1c3d;
+}
+.map-detail .badge + .badge {
+  margin-left: 6px;
+}
+
+@media (max-width: 600px) {
+  /* A fixed sheet height, and a map stage that actually gives up that space.
+     Previously the canvas stayed full height behind the sheet, so Leaflet
+     centred the world into the part the sheet was covering and the visible
+     strip was empty. The stage shrinking makes the ResizeObserver refit the
+     map into the space the reader can actually see. */
+  .map-detail {
+    height: var(--map-sheet-h);
+    max-height: var(--map-sheet-h);
+    padding-top: 18px;
+  }
+  /* With the stage reduced to a strip, anything pinned to its bottom edge sits
+     on top of the map itself. The "DEMO WORLD" badge in the title bar is
+     always on screen and the open record carries its own DEMO badge, so the
+     labelling survives without a caption over the map. */
+  .map-workspace.has-selection .map-disclaimer {
+    display: none;
+  }
+  .map-workspace.has-selection .map-stage {
+    /* `flex: none` would also drop the `flex: 1` that gives the stage its
+       width in this row layout, collapsing it to the width of the disclaimer
+       text. The basis carries the height; the grow/shrink stay at 1. */
+    flex: 1 1 auto;
+    height: calc(100% - var(--map-sheet-h));
+    width: 100%;
+  }
+  .map-sheet-grip {
+    display: block;
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--border);
+    margin: 0 auto 14px;
+  }
+  .map-detail .close-detail {
+    top: 12px;
+  }
+  .map-detail-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+  .map-detail-actions .button.primary {
+    grid-column: 1 / -1;
+  }
+  .map-subfilters {
+    margin-left: 8px;
+  }
+}

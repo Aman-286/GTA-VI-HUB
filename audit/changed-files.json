@@ -1,0 +1,202 @@
+[
+    {
+        "Path":  "src\\app\\account\\page.tsx",
+        "Change":  "modified",
+        "SHA256":  "E54FA65048B1A6C8114E2331B4C7FBFC427907A5D1D0EC51D5BECC16C7FFCE37"
+    },
+    {
+        "Path":  "src\\app\\api\\admin\\[resource]\\route.ts",
+        "Change":  "modified",
+        "SHA256":  "7FFB00016325BFF4B18D0928545E89513AF5C063327C5B0B3D05892D8CA8020B"
+    },
+    {
+        "Path":  "src\\app\\api\\auth\\local\\route.ts",
+        "Change":  "modified",
+        "SHA256":  "A5A5E9C96E58304F83DB3D57ABE2F6373ACD3A23001CDD5FA5F993650DF1E543"
+    },
+    {
+        "Path":  "src\\app\\api\\map\\route.ts",
+        "Change":  "modified",
+        "SHA256":  "A993C02E6CDB37EE7FEC98A5844F27B273DBC4655B72438B7C708612E34C847D"
+    },
+    {
+        "Path":  "src\\app\\api\\map\\summary\\route.ts",
+        "Change":  "modified",
+        "SHA256":  "0AEFA622F6CCFF28660BF85D8C254D1FDD482AB64E43DACF08CCE6130665BE00"
+    },
+    {
+        "Path":  "src\\app\\api\\preferences\\route.ts",
+        "Change":  "modified",
+        "SHA256":  "DBA092B55CE824CE6AA3CB5DF111E97789962CC336484735CAD65EA40BC202A5"
+    },
+    {
+        "Path":  "src\\app\\api\\progress\\route.ts",
+        "Change":  "modified",
+        "SHA256":  "EC7BF747452D095ED9D47A4A0ADEE98B77BF9AB2EDCF23208A36D5FB79F088F0"
+    },
+    {
+        "Path":  "src\\app\\gta-6\\[kind]\\page.tsx",
+        "Change":  "modified",
+        "SHA256":  "50FB3377FF0CF2B9EE6AB2957146328ABDFFB3157498AA37C34F7ABA81EA20F5"
+    },
+    {
+        "Path":  "src\\app\\gta-6\\[kind]\\[slug]\\page.tsx",
+        "Change":  "modified",
+        "SHA256":  "B063156FB7F8448C7DF1173DBF38DAF352D3A4B60306707373B3535F5A3D9A6F"
+    },
+    {
+        "Path":  "src\\components\\home-activity.tsx",
+        "Change":  "modified",
+        "SHA256":  "8BE9D1057321D94F55E68108DF8775ADF7553DF5E949CEEBCAE458D55797CDB3"
+    },
+    {
+        "Path":  "src\\components\\account\\account-dashboard.tsx",
+        "Change":  "modified",
+        "SHA256":  "9A37B5FEA9C958F9C76A0302452D5E7E5CD95250DD9DBB1BBBA96AEBAABE2756"
+    },
+    {
+        "Path":  "src\\components\\map\\map-explorer.tsx",
+        "Change":  "modified",
+        "SHA256":  "2A25F346D884FD9DC6B5BB9F8419836A6DFD7D02AE82A780932024F9CC1DE46B"
+    },
+    {
+        "Path":  "src\\components\\map\\map-summary.tsx",
+        "Change":  "modified",
+        "SHA256":  "230C5B99F3618B8D08A9E5A8BCC01B1896CF1AD59BD1F0D3F6B12C47939E8238"
+    },
+    {
+        "Path":  "src\\components\\spoilers\\spoiler-row.tsx",
+        "Change":  "modified",
+        "SHA256":  "57A7ECDD3243E88025A60FEF8C954C169E800F677D8E80F388D6623763F8B685"
+    },
+    {
+        "Path":  "src\\components\\spoilers\\spoiler-settings.tsx",
+        "Change":  "modified",
+        "SHA256":  "84BA9903F36EB636AC573BD5052CFE5EAF2E69B0D629CBDB351A66687C9F3791"
+    },
+    {
+        "Path":  "src\\hooks\\use-progress.ts",
+        "Change":  "modified",
+        "SHA256":  "71408302E7676AB7B0D7396845E2E6FF18F228CDA80D81F2AC422D7064940642"
+    },
+    {
+        "Path":  "src\\lib\\http.ts",
+        "Change":  "modified",
+        "SHA256":  "31A7AAF6914A57C4F1064889511C5FF23440D86BC36DEF24698AE4E8120472F1"
+    },
+    {
+        "Path":  "src\\lib\\structured-data.ts",
+        "Change":  "added",
+        "SHA256":  "0EA79B333BE2D3454BD9707217D28F32D334B28B3B27F157D1C0A6DD9898618E"
+    },
+    {
+        "Path":  "src\\lib\\auth\\session.ts",
+        "Change":  "modified",
+        "SHA256":  "09E986FF140EB828C723C66E0278329976BA3CCAA637D9264DD9665106E72AF2"
+    },
+    {
+        "Path":  "src\\lib\\db\\content.ts",
+        "Change":  "modified",
+        "SHA256":  "F95E4F920803671A6E3D85F78EE5D09F24AADBDA8D243E9DBD2C5C57E5AC4D07"
+    },
+    {
+        "Path":  "src\\lib\\spoilers\\context.ts",
+        "Change":  "modified",
+        "SHA256":  "7D601A6EFC2A662C70E743FC27A9AD1CEF648495BAC195A39280897D23F9C978"
+    },
+    {
+        "Path":  "db\\migrations\\0006_repair_reveal_tokens.sql",
+        "Change":  "added",
+        "SHA256":  "C6F8BE0B9D40B075E2F55C98B81717BDC9DBED0626ECDCBFF10D24E361B9F493"
+    },
+    {
+        "Path":  "docs\\ARCHITECTURE.md",
+        "Change":  "modified",
+        "SHA256":  "10EA12ECFB632EE00D3080423C28AF46252DBD3D138104FB54D61EDC69F21E2D"
+    },
+    {
+        "Path":  "docs\\INDEPENDENT-AUDIT-2026-09-16.md",
+        "Change":  "added",
+        "SHA256":  "877258CEAE3A2247E43455F3D8D0C2E110E4FCF8A03324982F06F47D3D7F41FE"
+    },
+    {
+        "Path":  "docs\\VALIDATION.md",
+        "Change":  "modified",
+        "SHA256":  "C7CF21DBF6F3242BE97BF9AF3A9F5E41818DFF4A06A789F3F4774B8F7BB7A7FF"
+    },
+    {
+        "Path":  "scripts\\test-accounts.mjs",
+        "Change":  "modified",
+        "SHA256":  "27C7214DEBB37ECBD6A1D34E2A14A379AC40C607352F3AFE47F4513F5D2CB0B7"
+    },
+    {
+        "Path":  "scripts\\test-audit.mjs",
+        "Change":  "added",
+        "SHA256":  "D82F8757F8DE3ADD2BE899EC3976D2743F39F38CC7A8CB4F3428B2FED8A58E7E"
+    },
+    {
+        "Path":  "scripts\\test-links.mjs",
+        "Change":  "added",
+        "SHA256":  "82B59594A0F9238DE1404DF59CE437D480DFF7FE02909BD30419CF0EEE737AD9"
+    },
+    {
+        "Path":  "scripts\\test-runtime.mjs",
+        "Change":  "modified",
+        "SHA256":  "423FDAB8A300CF5544E3EBA8665C071C28EB64912686BB61014BBBE67058A3C3"
+    },
+    {
+        "Path":  "scripts\\validate-local-db.mjs",
+        "Change":  "added",
+        "SHA256":  "F2C33623BEA55F60568DECED2C8E4718F7B7C4867492F6D2FE50B0D1603DDE47"
+    },
+    {
+        "Path":  "tests\\http.test.ts",
+        "Change":  "added",
+        "SHA256":  "1A1E299086C5B40E9DCC83B4DDB2B3BDE1F2752F3DB2473B7ED258E987A8AE4A"
+    },
+    {
+        "Path":  "tests\\migrations.test.ts",
+        "Change":  "added",
+        "SHA256":  "A1F2E6CC5CE066B887AEDD261E6FD46DE540AA49B9F3D1D698556B120D57C246"
+    },
+    {
+        "Path":  "tests\\session.test.ts",
+        "Change":  "added",
+        "SHA256":  "3729C22114A8CC38BE04835A848CC6BB9675EC1902069EAA4B7CCCEAE8E2539F"
+    },
+    {
+        "Path":  "tests\\structured-data.test.ts",
+        "Change":  "added",
+        "SHA256":  "F6C02B8538C7CC12E541262466EB0FB294F35BBE4FAD3843C25AB0A2018345CC"
+    },
+    {
+        "Path":  "eslint.config.mjs",
+        "Change":  "modified",
+        "SHA256":  "A896023DF9BEAF4CAFEB764858D78AB20A2FC6310473D28C938319AFA0E45D8B"
+    },
+    {
+        "Path":  "next-env.d.ts",
+        "Change":  "modified",
+        "SHA256":  "0F70629890B72A0A82E91972CC032C04B658B26C265373CB711CF576BFBF8FCC"
+    },
+    {
+        "Path":  "package-lock.json",
+        "Change":  "modified",
+        "SHA256":  "50EECA1A45441BA5B98DCDEF496B916ADAC2A9DDF0664083E86134B821DD7889"
+    },
+    {
+        "Path":  "package.json",
+        "Change":  "modified",
+        "SHA256":  "5808F8F4AB0C3F65ECC3A18EBD8339BA5471AA58593B271AB807B77F2F0DC872"
+    },
+    {
+        "Path":  "README.md",
+        "Change":  "modified",
+        "SHA256":  "E044418CB544543D932C6FEE69C6375743212953406C715D299A7A7D686227AF"
+    },
+    {
+        "Path":  "tsconfig.tsbuildinfo",
+        "Change":  "modified",
+        "SHA256":  "93608102EF3D6C803348AEABA29C97C355934EC32C573FD355A1ECE8A58C827A"
+    }
+]

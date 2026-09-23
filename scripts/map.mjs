@@ -1,0 +1,12 @@
+import { writeFileSync, mkdirSync } from "node:fs";
+// A functional schematic test coordinate space, intentionally not real-world/game geography.
+let roads = "";
+for (let x = 200; x < 1420; x += 45) roads += `<path d="M${x} 100V900"/>`;
+for (let y = 120; y < 920; y += 40) roads += `<path d="M120 ${y}H1490"/>`;
+const coastline =
+  "M165 160L450 95 700 130 820 220 800 325 930 390 940 570 825 640 800 830 690 910 470 865 355 730 190 680 115 480Z";
+const island =
+  "M1130 195L1295 175 1410 275 1390 465 1290 540 1270 725 1135 820 1030 735 1070 555 1030 410Z";
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000"><defs><pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#292B4A" stroke-width=".6"/></pattern><clipPath id="land"><path d="${coastline}"/><path d="${island}"/></clipPath></defs><rect width="1600" height="1000" fill="#151D34"/><rect width="1600" height="1000" fill="url(#grid)"/><g fill="#2C2448" stroke="#78568F" stroke-width="3"><path d="${coastline}"/><path d="${island}"/></g><g clip-path="url(#land)" fill="none"><g stroke="#493660" stroke-width="3">${roads}</g><g stroke="#251C40" stroke-width="28"><path d="M350 80L430 400 360 650 650 960"/><path d="M620 80L610 350 785 500 640 900"/></g><g fill="none" stroke="#AB699C" stroke-width="5"><path d="M350 80L430 400 360 650 650 960"/><path d="M620 80L610 350 785 500 640 900"/><path d="M130 420L560 465 850 380 1400 440"/></g><g fill="#234451"><rect x="215" y="210" width="150" height="120" rx="25"/><rect x="505" y="545" width="150" height="170" rx="18"/><rect x="1135" y="280" width="110" height="105" rx="20"/></g></g><g fill="none" stroke="#FF9B8E" stroke-width="5"><path d="M915 455L1045 455"/><path d="M813 635L1060 635"/></g><g font-family="Arial,sans-serif" text-anchor="middle" fill="#D4BDDE" font-size="19" letter-spacing="5"><text x="520" y="285">NORTH DISTRICT</text><text x="610" y="510">CENTRAL DISTRICT</text><text x="550" y="795">SOUTH DISTRICT</text><text x="1230" y="595" transform="rotate(-12 1230 595)">COAST DISTRICT</text></g><g fill="#69A8BC" font-size="17" font-family="Arial" letter-spacing="8"><text x="865" y="845" transform="rotate(-75 865 845)">DEMO WATERWAY</text></g><text x="55" y="950" fill="#B6ACC8" font-family="monospace" font-size="16">FICTIONAL SCHEMATIC • 1600 × 1000 • NOT THE GTA VI MAP</text></svg>`;
+mkdirSync("public", { recursive: true });
+writeFileSync("public/demo-map.svg", svg);

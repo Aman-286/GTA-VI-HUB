@@ -1,0 +1,141 @@
+/* Motion for navigation and in-page view switches.
+
+   Two shapes only, so movement stays predictable across the site:
+   - page-enter / page-exit: route changes, via React's <ViewTransition>.
+     The site has no loading.tsx, so the current page stays put until the next
+     one is ready and these animate a direct old -> new handoff.
+   - .tab-panel: swapping content inside one page (cheat platforms, checklist
+     tabs). A plain CSS animation, replayed because the panel is keyed on the
+     active tab. Shorter and enter-only: the frame around it never moves, so
+     there is no outgoing state worth animating. */
+:root {
+  --t-out: 140ms;
+  --t-in: 280ms;
+  --t-lift: 16px;
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* One motion scale for the whole site. Durations and curves were previously
+     picked per component -- 0.15s, 0.25s, 0.4s, 0.7s, 160ms, 180ms, most with
+     no curve at all, so everything defaulted to `ease` and each surface
+     answered a hover at a slightly different speed. Three speeds cover every
+     case: a state change you should barely notice, a normal reveal, and the
+     slow drift of an image inside its frame.
+
+     --ease-exit is intentionally the mirror of --ease-out: things leave with
+     acceleration and arrive with deceleration, which is what makes motion read
+     as physical rather than mechanical. */
+  --dur-fast: 150ms;
+  --dur-base: 260ms;
+  --dur-slow: 640ms;
+  --ease-exit: cubic-bezier(0.55, 0, 0.85, 0.35);
+  /* A gentle overshoot for elements that appear under the pointer. Kept very
+     shallow -- a pronounced bounce reads as cheap at this scale. */
+  --ease-soft: cubic-bezier(0.34, 1.16, 0.64, 1);
+}
+
+/* The transition overlay swallows clicks while it plays; let them reach the
+   live page so a quick second click is never dropped. */
+::view-transition {
+  pointer-events: none;
+}
+
+/* Header, footer and quick-nav live in the root snapshot. Keep its crossfade
+   brief so those chrome elements read as fixed rather than fading. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 180ms;
+}
+
+/* `height: auto` stops the browser stretching a short page's snapshot to a
+   tall one's aspect ratio, which otherwise smears the content mid-flight. */
+::view-transition-old(.page-exit),
+::view-transition-new(.page-enter) {
+  height: auto;
+}
+
+/* Old content leaves quickly so it stops competing for attention; new content
+   arrives a beat later, and travels further than it fades. */
+::view-transition-old(.page-exit) {
+  animation:
+    var(--t-out) ease-in both hub-fade-out,
+    var(--t-out) ease-in both hub-sink;
+}
+::view-transition-new(.page-enter) {
+  animation:
+    var(--t-in) var(--ease-out) var(--t-out) both hub-fade-in,
+    calc(var(--t-in) + 140ms) var(--ease-out) both hub-rise;
+}
+
+.tab-panel {
+  animation: tab-in 220ms var(--ease-out) both;
+}
+@keyframes tab-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+@keyframes hub-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes hub-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes hub-rise {
+  from {
+    transform: translateY(var(--t-lift));
+  }
+}
+@keyframes hub-sink {
+  to {
+    transform: translateY(calc(var(--t-lift) * -0.4));
+  }
+}
+
+/* Positional movement is the usual motion-sensitivity trigger. Drop every
+   view-transition animation to an instant swap, matching the site-wide
+   reduced-motion rule in globals.css. */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+  }
+}
+
+/* The command palette appeared and vanished instantly, which read as a glitch
+   next to the eased motion everywhere else. Radix stamps data-state on the
+   overlay and content and holds the unmount until these finish. */
+.dialog-overlay[data-state="open"] {
+  animation: hub-fade-in 160ms ease-out;
+}
+.dialog-overlay[data-state="closed"] {
+  animation: hub-fade-out 130ms ease-in;
+}
+.search-dialog[data-state="open"],
+.modal[data-state="open"] {
+  animation: dialog-in 180ms var(--ease-out);
+}
+.search-dialog[data-state="closed"],
+.modal[data-state="closed"] {
+  animation: dialog-out 130ms ease-in;
+}
+/* Keyframes keep the -50% centring offset that .search-dialog relies on. */
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-8px) scale(0.98);
+  }
+}
+@keyframes dialog-out {
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-6px) scale(0.985);
+  }
+}

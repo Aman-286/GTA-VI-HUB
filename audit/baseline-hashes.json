@@ -1,0 +1,494 @@
+[
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\admin.css",
+        "SHA256":  "DCA895FDF7461AD575A8603FE18B3F7F6D7EC2F8BB16F22EA9A118902236017B"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\error.tsx",
+        "SHA256":  "2061F769F64473C21584CACC61535CFD2C9CC92C6DA304B4126EDDC8B3E7D4D7"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\global-error.tsx",
+        "SHA256":  "A6555F150A244404F4C7E020F63AA7C1C06DA916B5BF915C00C140BD917B49DB"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\globals.css",
+        "SHA256":  "50F1F5109010FDC1554074C2F980451893A17317116925AD9B142FC2181A9A9E"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\icon.svg",
+        "SHA256":  "9399CF8B837581EBFA36A31FBB011F5E2B9395CE156AB9DCC58E898B5B414886"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\layout.tsx",
+        "SHA256":  "E93DA91F4616C7C37D9C98C30F8B3BF3613D6911B5590CA002738CA41555CC09"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\map.css",
+        "SHA256":  "1B5ACB718B7C1D48967CCC2B48B28F912A1DD5DA6ACAFE895D3B86C04DA0F5A8"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\not-found.tsx",
+        "SHA256":  "A0A28DD7F92BB4121ACC9355CD2EC09F07BCF6E784E2DFFAC6BFCDD04B11BFAD"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\page.tsx",
+        "SHA256":  "D8791DBB9BF29A69051E7119DEEA2AC03D029FAF467E86D8868F600EF473AD4E"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\robots.ts",
+        "SHA256":  "1F4E9FD59F24DEC11571EBE8BC8C283DD995058A9755AB5C2DBE7ED7C0511ED1"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\sitemap.ts",
+        "SHA256":  "23031E322078FE64F9584EF49400B52F7D90A0F8C3F14A76124556C832B12E6E"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\transitions.css",
+        "SHA256":  "D992CB883E38896C5B9424BA6FCA9F8868BF8DCBF9F7FBEA08ABC0FD236E027E"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\account\\page.tsx",
+        "SHA256":  "EEFB3E5B5502E1FEEE112F6DCA0868E896E3BE23738313F116A68E4B2F900D70"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\admin\\page.tsx",
+        "SHA256":  "5BBF84D583404D85A3351561130EC00BB6C12C21B2C6CFE98671D2D121296850"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\account\\route.ts",
+        "SHA256":  "5090AB44968C0DA05868750FC4316ADCCE2775CA3487744D158F0994C08895A8"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\admin\\[resource]\\route.ts",
+        "SHA256":  "13BAB454DB05FD2014630F370837EEB843B690CE7D4182AEE0228E5CAFA2262E"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\analytics\\route.ts",
+        "SHA256":  "D3373D20D03C2B3EF122B44CFB1FEEF157AF18CD76E90D660090D9F7065A4FE7"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\auth\\callback\\route.ts",
+        "SHA256":  "DBF3D902B90DD6137BABBCD7E4455F4D8614D83B76156D499C334CC57B743D3B"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\auth\\github\\route.ts",
+        "SHA256":  "DBF3D902B90DD6137BABBCD7E4455F4D8614D83B76156D499C334CC57B743D3B"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\auth\\local\\route.ts",
+        "SHA256":  "94FDE4ACBF5451447BC9CB86B1B103A23A66B8CD72F9C5D75A172CA14EC3C23B"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\map\\route.ts",
+        "SHA256":  "F3D4156BC3798485C12B475F7DE6C6BD67BA8F0DE387D86006728CF82B74AADE"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\map\\state\\route.ts",
+        "SHA256":  "A3AC6562049F29497B5D78D7AFC1632EB4493FF07E198062DF2449BB9272F8C1"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\map\\summary\\route.ts",
+        "SHA256":  "438D84BC6F5F584B81B1E06FEF886FD75F018CE9FFFA63B1938801D286824782"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\preferences\\route.ts",
+        "SHA256":  "DA76CC13BEA0F262FDBEFBC3449B4F5C0B0B13B818F61F0E82F355CBFABFA48D"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\progress\\route.ts",
+        "SHA256":  "D53104321B173161CC228D117EFFFCF92B01DB69B4933E88BDD8B7994E8EEF8F"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\reveal\\route.ts",
+        "SHA256":  "1328007EA8D147FD0379EAA8A0DA441F261470A794239AF0DD18CCFCD078A8E0"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\search\\route.ts",
+        "SHA256":  "D2571EB5B69353A594E019A0B8C9D50D4A51FBC2C79F53F11334405AFFFD7254"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\session\\route.ts",
+        "SHA256":  "D7D29E277346482B391B1EFC9996D1D3995DE666643F880056F746998B083266"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\api\\submissions\\route.ts",
+        "SHA256":  "141CA0CA75D73AA0C81D85C414E23E3EFBA242D7EF0282FE4DCA6B50F04FFA97"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\gta-6\\cheats\\page.tsx",
+        "SHA256":  "94F6F80ABB97272577A95EA8D2DB41D6B604D7CEE7C765AB6163F50E6940A5D8"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\gta-6\\collectibles\\page.tsx",
+        "SHA256":  "C5FFFF35EA21A843AD6EBBC3FABBF06C1D902CA7A36D3BBE6845C802DDDC47E7"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\gta-6\\map\\page.tsx",
+        "SHA256":  "10F987CAE49800318616121690F9A101CE9D184F619B61C29C737A869A4C5DB8"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\gta-6\\[kind]\\page.tsx",
+        "SHA256":  "5C7A96B0320AC503F447EE92F19C68C0C420E9C55DCD0F6CE8A8A1F22923CDB2"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\gta-6\\[kind]\\[slug]\\page.tsx",
+        "SHA256":  "E5D418F2A96F9B9A1B98A47B7B2AE139EA2763CE6C59B6BC50D33FAE0418C4E5"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\search\\page.tsx",
+        "SHA256":  "F68AC339F34076C2B3805D34837ECC78F8522A9AD195D860FDB98FD59D1609AF"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\submit\\page.tsx",
+        "SHA256":  "8DA5CE0A0727883EF86B9C4C686AA69777AB88163EF781FB75E9A4A54E113126"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\app\\[info]\\page.tsx",
+        "SHA256":  "A0379E3887072052312DF0FA3B53AA444B92421BC85470F7E0E43A8B13A60CA7"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\home-activity.tsx",
+        "SHA256":  "4817D6D65E8A4E5FEE0E4865C2584283660B579E47419B5551A422C625901140"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\official-banner.tsx",
+        "SHA256":  "1F41212462FA6097F4903A820FD9166CECDB9443FFFFEEA5AE3A5381124AEB6B"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\ui.tsx",
+        "SHA256":  "06896F5FF7979CCAE00C2B5C04D915B4D211C1A410EBF11B08D7294A1CF028FF"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\webmcp.tsx",
+        "SHA256":  "B0CE4E628CFFB40990A2B5148C8AF0A6710302BA4CE9C9C9E23997CB3F5099E4"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\account\\account-auth.tsx",
+        "SHA256":  "F05666BEC644F3B88997D0B4F6A6C268B527F86AE34F73065BCABCC6E86D0C62"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\account\\account-dashboard.tsx",
+        "SHA256":  "84DF474A5311F254A2831D17AD33B56A66F28C9637D96BDB8B6DCF3BE21C4D8B"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\admin\\admin-workspace.tsx",
+        "SHA256":  "B34AFE54562DA63332456C0DD615E426DADCB303F02AD988B098BD2992288FC0"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\admin\\entity-editor.tsx",
+        "SHA256":  "1FDAF9EE9243A65944EF01C1D80D9AEC65DF3B5E535CF30A5C84783CF909E8D4"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\admin\\import-panel.tsx",
+        "SHA256":  "61119F14E12AB259584C7B7DDCABDCB26ABE2938F6288648090EA0B8A50B8D71"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\admin\\map-editor.tsx",
+        "SHA256":  "50034EE2C1C4DC50C2196CEA029BACB69C7ED4222AF622300526A408033A722A"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\community\\submission-form.tsx",
+        "SHA256":  "AC1D1EDCEA3242C4F927F81257CAC1DBEFCE8BE702F643170C47AAFDBFD665F6"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\entities\\cheat-list.tsx",
+        "SHA256":  "3606EA0DDD52E465B7ACBBF6E9FE6CCA99DAEAB4EB5495CCFBD66554633DA318"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\entities\\collectible-list.tsx",
+        "SHA256":  "5110D5D32259164503FBB8BD8F25427C846DC467E8038DBF7DE2EB30364AF832"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\entities\\entity-actions.tsx",
+        "SHA256":  "3BE7BB976FCDFB9B3D0E5F5637585AD9CD4A6382FF96086594337BCACF10F55E"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\entities\\recent-view.tsx",
+        "SHA256":  "CA58CF926ABDAD89E0A8500EC4950363968A3E1272F1FE414FE6D52D245162D7"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\layout\\footer.tsx",
+        "SHA256":  "A5E1E5342EEE51BB358E6025EA25D560754DAE16E3DBCF1F4BC1B86490DE21C2"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\layout\\header.tsx",
+        "SHA256":  "C26278D902419778737B0107BB5E9C2A3BD63808C84B3A3167C7A9DC955DCFF5"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\layout\\nav-pending.tsx",
+        "SHA256":  "2551284C829B7A4C555613D0E2DA86D1D226327ED8C1B2BBC9F45701359D0623"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\layout\\page-transition.tsx",
+        "SHA256":  "B01AF396CA6F370E00A98B62A27F8C772A359BE14181BA6A1DC5C753367C6701"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\map\\map-canvas.tsx",
+        "SHA256":  "93EA45F3F1033471691952D487C4D281246E259B5347C25D5E8C38FF4A188C9E"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\map\\map-explorer.tsx",
+        "SHA256":  "FCBC90285010F35E63ECFD99D1589813C21995E20F1A248614FAED30D9BB20F4"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\map\\map-summary.tsx",
+        "SHA256":  "E09A6E97B496E8B641387C8A5CE6E2B41976A40A308F5244756F1BF3F8D5DDC2"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\map\\marker-panel.tsx",
+        "SHA256":  "3424CFE90ABEFE3F1D5137A90E1086CBDAA8708C6C1797D63EC9B869417B219E"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\search\\search-command.tsx",
+        "SHA256":  "1E33BDA598D0C4A64DB11DC51A56118BE6BBB319C50B80C076EDB6B0CA201051"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\search\\search-trigger.tsx",
+        "SHA256":  "EFD6974BEC3252DFB23E8790C3DECE43C8A55FD8E59D1F148AFC1C7BE21C1D0E"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\spoilers\\spoiler-gate.tsx",
+        "SHA256":  "EB557CAA5F3D038F3DEA8A424711CD99D2D2E7726B64C26A4732F3B8FB249207"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\spoilers\\spoiler-notice.tsx",
+        "SHA256":  "C027E208925EB5F317A072905E1B130690161ACE43219B739F575580B55D5E8C"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\spoilers\\spoiler-row.tsx",
+        "SHA256":  "194F47FD1BFAB7D2D9F48AAE1FE31438A38AF0D5C166A5CDB28B2450320D158D"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\components\\spoilers\\spoiler-settings.tsx",
+        "SHA256":  "BC58E7D70273CC905F89FB6EC94486CD8C3363032912CCEB31A95A4793F2BE18"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\hooks\\use-progress.ts",
+        "SHA256":  "EF89E6F4E8A1815B3F036D0777C0B0088C7F2F92C0E5808D85BAF26C8D8336D5"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\http.ts",
+        "SHA256":  "59000298C655E3D5BDE91DF5732B4D2C20333251A7E847E498EF876EFAC344AE"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\auth\\password.ts",
+        "SHA256":  "BD332E81A30892A0C566A77E7A59FE9B9DDA1E008623BFC8288C7C4CF4BA3E34"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\auth\\session.ts",
+        "SHA256":  "D1B2C90F4E33CA4927CD8B06C8CF5951DF00D2CA43894DA2418AAC191C2192DB"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\content\\editor.ts",
+        "SHA256":  "FA2C311F43A2CF5DA5F1EF07B195F82A344D9C0ECD4D5900D65FB76E717B027D"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\content\\fields.ts",
+        "SHA256":  "868517415DAAB3E1956C1B0E1627C5CC0C20003955BEB4E95E74EFBA0B9C2782"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\content\\import.ts",
+        "SHA256":  "E8C3356EA000E61E3D565B9D3932A747F4F0225F78C224767059E3213AFF95BC"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\content\\retrieval.ts",
+        "SHA256":  "35819256E56CD3AD8BE42A38FFE4F9B561A2FAD8502D89680CFC895425BA8522"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\content\\validation.ts",
+        "SHA256":  "15728983BDD8F2B4098F8DB692606C7589E0BA645F927540F26D0B4AA34A02F9"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\db\\content.ts",
+        "SHA256":  "0C34826EF5D41690C48960A1BAA0EB5E0A8A8C85AAF8F087DC696F12E616E058"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\db\\index.ts",
+        "SHA256":  "DB6823ECE06D3C68C1592058CBCB67F14B7C3C15AC0D9C85B6D21B55039C3F39"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\map\\controller.ts",
+        "SHA256":  "5D43DFEA612DECDDF728DE9BF2E90C60F2402F2F62911003C293E021EC24E2E3"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\map\\viewport.ts",
+        "SHA256":  "88AD0CD4A876FCD7608BAA48F15914CFB2D9E71E59685A9D689298B202F79A4C"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\spoilers\\conceal.ts",
+        "SHA256":  "1202D1CE21B55FFF130A83A493E757FE078995B8122BF194DA918F8C7DF2413E"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\spoilers\\context.ts",
+        "SHA256":  "272F73AA6E1C7BD92B67141DC2F19462E7081FE00DF5EC8F45C6D650DFD6BE99"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\spoilers\\policy.ts",
+        "SHA256":  "20370472DCA5AA58C3F45A301EA9ECC4D71E6B7CC502701AF42B19612E76280B"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\lib\\spoilers\\sql.ts",
+        "SHA256":  "443E78B832C2015BD203FB8583384D0F1E1DB7D6503AD61CAEDFA05B41D0E48C"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\src\\types\\content.ts",
+        "SHA256":  "8F53953DCA8A74DC2D97DAD475E06EEDD35193782A83D4EC8FECA3D9B4742DA2"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\db\\maintenance.sql",
+        "SHA256":  "496F9E32F648E80C06E6FC9B22438F4EDF921E664690E1CE568C4CDB766B01B6"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\db\\seed.sql",
+        "SHA256":  "DC005351FA67F011F86303A6D7AE4FAE00F0A708D2E918DE73B8DC869682002A"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\db\\migrations\\0001_foundation.sql",
+        "SHA256":  "607108F5ADA11B047441D3DB3F73DAE961EC2DE8135AAF32DA453A8DF0762586"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\db\\migrations\\0002_local_accounts.sql",
+        "SHA256":  "04D908CA2B47D88A2F97D5D614C3F7D21FFDF2C22E99EBB1229B1B7A35BEC091"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\db\\migrations\\0003_spoilers.sql",
+        "SHA256":  "38CC20A1B6742BD3A6ACA5EDD79E1AFCAD71D56D732015A5B508DDB1F97E4C6F"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\db\\migrations\\0004_reveal_tokens.sql",
+        "SHA256":  "66CB32EE892DF8D5CB6C9DEC2CACDBDFC7F6C2C763B68C762A94FB4BFA031C7E"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\db\\migrations\\0005_map_markers.sql",
+        "SHA256":  "20B2AB7E07709CC0946966C29120DC4C410ED29D0EF64D1BA058108AC2BA6E7F"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\docs\\ARCHITECTURE.md",
+        "SHA256":  "C8915BD88864C0EDA821DE0379E82CA856A30B32D933A88D77454822D7B53F7A"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\docs\\DEPLOYMENT.md",
+        "SHA256":  "CBCD9758F0311008AE05CEE9E4DC1A4B1D462D22B92035C1EE66AE8E71EAABDD"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\docs\\DESIGN.md",
+        "SHA256":  "A58EE99EED36C8B32030669C8181E002F7C4330A0510E4F0F141F6DE37B07235"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\docs\\MEDIA.md",
+        "SHA256":  "1B81DDAD252ACE9DE0EBD29DFCEA47E73FA285414DAEE013C5E384DD214D9E25"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\docs\\SECURITY.md",
+        "SHA256":  "FCB67C0584BDA2DA1F277FE50E76C16E1C504602B37FE7279FA68CF6D0F27D4C"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\docs\\VALIDATION.md",
+        "SHA256":  "EAD17B1AF25296B9535C9CF281FDE83961BB37E511F4591DE3827CAD0FC04CC1"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\scripts\\grant-local-admin.mjs",
+        "SHA256":  "CBFB0364CF6E40A47D6FCB8BFB5A0CE88844C8A561535A4C1658E6F8D182596D"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\scripts\\map.mjs",
+        "SHA256":  "A981292492494A53B5C16C2F029D83007DB6472292EE128DB7026B64D60BEBEF"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\scripts\\prepare-official-media.mjs",
+        "SHA256":  "61C4E32A1C6BC115745618E328355F47023542F3939EFDA396A20654E84BD8FC"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\scripts\\seed.mjs",
+        "SHA256":  "50B5BE8259621AB9EBB29CF9A3EC1F6955C66839A301399B1A47A0BF2D493118"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\scripts\\test-accounts.mjs",
+        "SHA256":  "9C685FD8930A4AA5D5674BCD1A14D6E558D67252CB49DA957D7568AE42895F0E"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\scripts\\test-runtime.mjs",
+        "SHA256":  "F05EB36CBB0A1233DA5B594083A39C538402965894F9479E13E0F3DD3C6AD324"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\tests\\content.test.ts",
+        "SHA256":  "37EFF4363F71495A4404DF9F4038A617E68495D69C897561DCEE440C1D5B9DFF"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\tests\\map.test.ts",
+        "SHA256":  "10809CE531429866041EB817F72D24F39EC98E5D57C37696049CC3441DD9243B"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\tests\\password.test.ts",
+        "SHA256":  "C08890C0D0B8F7B23E8FF140162120E5B328EC73D1289245FE4F2898096CA730"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\tests\\spoilers.test.ts",
+        "SHA256":  "07BE7354EDF8F0EDB0F19A3988EFB87D35C24CB6FAD1565E559ED198F53DEEDA"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\.dev.vars.example",
+        "SHA256":  "7B0450DE50633F022CFBF0963235B6B3F95E4A58DEBC702F8041D399FEB6C7DC"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\.env.example",
+        "SHA256":  "B9B01A7D86CF59810659CBC1651038186A3133DAFC228140076A7710DAF6030C"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\.gitignore",
+        "SHA256":  "9A66C9D5D9881535111E0F7BD4D7FD309B212AE0BEFB38C3E1A24BCDA3C8E630"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\AGENTS.md",
+        "SHA256":  "63F2C50380ED6303237CCE215CE27AF1D620D094C215E28D1B1538A3C070E3BB"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\CLAUDE.md",
+        "SHA256":  "336CC4FBF19BEAADA7CCF9986414FA91851A8D7A07DFB3CCBE800A69EED0AB49"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\eslint.config.mjs",
+        "SHA256":  "E94222A56C2A27092CB770FE941CDC288DC55A2BD0B4AB64700CF866D9FF6AB2"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\next-env.d.ts",
+        "SHA256":  "1862AC4BBBC5192D4BF562161DF66EA547ED3E67173100656AB606AE9797DB2B"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\next.config.ts",
+        "SHA256":  "426AC956D3AD10187E6E010B93F6976D8573D501C728DED236C7669358D8B09F"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\open-next.config.ts",
+        "SHA256":  "D000C9F8180E9A6FDDE558B4E3EE24CA895C9D08F83281DEA8A66C71F4BE1055"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\package-lock.json",
+        "SHA256":  "98C4357A7699E43D59518DA95410D4F81B26B74EEC2419991F7B5417358813DE"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\package.json",
+        "SHA256":  "56CF164E3FC9272D4A13AF7CF6B3B610AD325D73BEC3F275D312E22A77FD0B8A"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\README.md",
+        "SHA256":  "1975DB41C0F9952734CD84FE7A1BC6A41452176F446CDE8393E7DA974DD4646A"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\tsconfig.json",
+        "SHA256":  "F0C745B75EA7D9DEF209300874ADB5C54101866EE207CBFB5B4E99EEB45E41B9"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\tsconfig.tsbuildinfo",
+        "SHA256":  "71BA772D0EA4B9D851FF2CF62E47D0EB2470EB671565999DE9AFFF2331A95EF2"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\vitest.config.ts",
+        "SHA256":  "E56235E455CE9260D5F5052591AE125EF9DE02B611B969BD0F8B35551077062F"
+    },
+    {
+        "Path":  "C:\\Users\\aman2\\Desktop\\GTA VI\\wrangler.jsonc",
+        "SHA256":  "ECFF5097E3A439FB9C05315612B2A2D58C4CA92399EF4C4E057405B7024B9CCD"
+    }
+]
